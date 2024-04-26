@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/LinkedInLearning/learning-full-stack-javascript-development-mongodb-node-and-react-2424660#readme",
   "dependencies": {
-    "axios": "^1.4.0",
+    "axios": "^1.6.0",
     "cors": "^2.8.5",
     "ejs": "^3.1.9",
     "express": "^4.19.2",
