@@ -7,7 +7,8 @@
     "dev:server": "tsnd src/server/server.ts",
     "docker:up": "docker-compose up",
     "dev:bundler": "webpack -w --mode development",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "format": "prettier .  --write"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,8 @@
     "@eslint/compat": "^1.2.2",
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.14.0",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
     "@typescript-eslint/parser": "^8.13.0",
     "eslint": "^9.14.0",
     "eslint-plugin-react": "^7.37.2",
