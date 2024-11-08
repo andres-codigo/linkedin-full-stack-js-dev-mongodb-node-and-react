@@ -29,6 +29,10 @@ export default [
       "plugin:react/recommended",
       "plugin:react-hooks/recommended",
     ),
+    ...compat.env({
+      es2022: true,
+      node: true,
+    }),
   ),
   {
     ignores: [
@@ -37,12 +41,14 @@ export default [
       "**/prettier.config.js",
     ],
   },
+  // general rules
   {
     plugins: {
       "react": fixupPluginRules(react),
       "react-hooks": fixupPluginRules(reactHooks),
     },
 
+    files: ["**/*.{js,ts,jsx,tsx,vue}"],
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: "module",
