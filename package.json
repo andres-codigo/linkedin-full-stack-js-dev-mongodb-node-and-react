@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev:server": "tsnd src/server/server.ts",
-    "docker:up": "docker-compose up",
+    "docker:up": "docker compose up",
     "dev:bundler": "webpack -w --mode development",
     "lint": "eslint src",
     "format": "prettier .  --write"
@@ -39,6 +39,7 @@
     "@eslint/js": "^9.14.0",
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
+    "@types/react-dom": "^18.3.1",
     "@typescript-eslint/parser": "^8.13.0",
     "eslint": "^9.14.0",
     "eslint-plugin-react": "^7.37.2",
