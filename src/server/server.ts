@@ -21,7 +21,7 @@ server.get(["/", "/contest/:contestId"], async (req, res) => {
   });
 });
 
-server.listen(config.PORT, config.HOST, () => {
+server.listen(Number(config.PORT), config.HOST, () => {
   console.log(
     `Express is listening at ${config.SERVER_URL}`,
     `Free Mem: ${os.freemem() / 1024 / 1024}`,
