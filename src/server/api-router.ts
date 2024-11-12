@@ -7,6 +7,17 @@ const router = express.Router();
 router.use(cors());
 router.use(express.json());
 
+interface Name {
+  id: string;
+  name: string;
+  timestamp: Date;
+}
+
+interface Contest {
+  id: string;
+  names: Name[];
+}
+
 router.get("/contests", async (req, res) => {
   const client = await connectClient();
 
@@ -40,7 +51,7 @@ router.post("/contest/:contestId", async (req, res) => {
   const { newNameValue } = req.body;
 
   const doc = await client
-    .collection("contests")
+    .collection<Contest>("contests")
     .findOneAndUpdate(
       { id: req.params.contestId },
       {
@@ -55,7 +66,7 @@ router.post("/contest/:contestId", async (req, res) => {
       { returnDocument: "after" },
     );
 
-  res.send({ updatedContest: doc.value });
+  res.send({ updatedContest: doc });
 });
 
 router.post("/contests/", async (req, res) => {
