@@ -1,10 +1,16 @@
 import * as React from "react";
 
+interface Contest {
+  id: string;
+  categoryName: string;
+  contestName: string;
+}
+
 const ContestPreview: React.FC<{
-  contest: object;
-  onClick: any;
+  contest: Contest;
+  onClick: (id: string) => void;
 }> = ({ contest, onClick }) => {
-  const handleClick = (event) => {
+  const handleClick = (event: React.MouseEvent) => {
     event.preventDefault();
 
     onClick(contest.id);
