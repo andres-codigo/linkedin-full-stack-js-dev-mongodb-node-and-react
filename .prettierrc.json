@@ -1,13 +1,8 @@
 {
-	"singleQuote": true,
 	"tabWidth": 4,
 	"useTabs": true,
-	"trailingComma": "all",
 	"semi": false,
-	"bracketSpacing": true,
-	"bracketSameLine": true,
+	"singleQuote": true,
 	"quoteProps": "consistent",
-	"arrowParens": "always",
-	"proseWrap": "preserve",
-	"endOfLine": "lf"
+	"bracketSameLine": true
 }
