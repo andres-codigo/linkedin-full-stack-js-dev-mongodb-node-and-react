@@ -1,40 +1,38 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react'
 
-import { fetchContestList } from "../api-client";
+import { fetchContestList } from '../api-client'
 
-import ContestPreview from "./contest-preview";
-import Header from "./header";
+import ContestPreview from './contest-preview'
+import Header from './header'
 
 const ContestList = ({ initialContests, onContestClick }) => {
-  const [contests, setContests] = useState(
-    initialContests ?? [],
-  );
+	const [contests, setContests] = useState(initialContests ?? [])
 
-  useEffect(() => {
-    if (!initialContests) {
-      fetchContestList().then((contests) => {
-        setContests(contests);
-      });
-    }
-  }, [initialContests]);
+	useEffect(() => {
+		if (!initialContests) {
+			fetchContestList().then((contests) => {
+				setContests(contests)
+			})
+		}
+	}, [initialContests])
 
-  return (
-    <>
-      <Header message="Naming Contests" />
+	return (
+		<>
+			<Header message="Naming Contests" />
 
-      <div className="contest-list">
-        {contests.map((contest) => {
-          return (
-            <ContestPreview
-              key={contest.id}
-              contest={contest}
-              onClick={onContestClick}
-            />
-          );
-        })}
-      </div>
-    </>
-  );
-};
+			<div className="contest-list">
+				{contests.map((contest) => {
+					return (
+						<ContestPreview
+							key={contest.id}
+							contest={contest}
+							onClick={onContestClick}
+						/>
+					)
+				})}
+			</div>
+		</>
+	)
+}
 
-export default ContestList;
+export default ContestList

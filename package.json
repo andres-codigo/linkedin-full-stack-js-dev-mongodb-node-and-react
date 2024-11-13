@@ -1,51 +1,51 @@
 {
-  "name": "linkedin-full-stack-javascript-development-mongodb-node-and-react",
-  "version": "1.0.0",
-  "description": "This is the repository for the LinkedIn Learning course Learning Full-Stack JavaScript Development: MongoDB, Node, and React. The full course is available from [LinkedIn Learning][lil-course-url].",
-  "main": "index.js",
-  "scripts": {
-    "dev:server": "tsnd src/server/server.ts",
-    "docker:up": "docker compose up",
-    "dev:bundler": "webpack -w --mode development",
-    "lint": "eslint src",
-    "format": "prettier .  --write"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LinkedInLearning/learning-full-stack-javascript-development-mongodb-node-and-react-2424660.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/LinkedInLearning/learning-full-stack-javascript-development-mongodb-node-and-react-2424660/issues"
-  },
-  "homepage": "https://github.com/LinkedInLearning/learning-full-stack-javascript-development-mongodb-node-and-react-2424660#readme",
-  "dependencies": {
-    "axios": "^1.7.7",
-    "cors": "^2.8.5",
-    "ejs": "^3.1.10",
-    "express": "^4.21.1",
-    "mongodb": "^6.10.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "ts-loader": "^9.5.1",
-    "typescript": "^5.6.3",
-    "webpack": "^5.96.1",
-    "webpack-cli": "^5.1.4"
-  },
-  "devDependencies": {
-    "@eslint/compat": "^1.2.2",
-    "@eslint/eslintrc": "^3.1.0",
-    "@eslint/js": "^9.14.0",
-    "@types/cors": "^2.8.17",
-    "@types/express": "^5.0.0",
-    "@types/react-dom": "^18.3.1",
-    "@typescript-eslint/parser": "^8.13.0",
-    "eslint": "^9.14.0",
-    "eslint-plugin-react": "^7.37.2",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "globals": "^15.12.0",
-    "prettier": "^3.3.3",
-    "ts-node-dev": "^2.0.0"
-  }
+	"name": "linkedin-full-stack-javascript-development-mongodb-node-and-react",
+	"version": "1.0.0",
+	"description": "This is the repository for the LinkedIn Learning course Learning Full-Stack JavaScript Development: MongoDB, Node, and React. The full course is available from [LinkedIn Learning][lil-course-url].",
+	"main": "index.js",
+	"scripts": {
+		"dev:server": "tsnd src/server/server.ts",
+		"docker:up": "docker compose up",
+		"dev:bundler": "webpack -w --mode development",
+		"lint": "eslint src",
+		"format": "prettier .  --write"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/LinkedInLearning/learning-full-stack-javascript-development-mongodb-node-and-react-2424660.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/LinkedInLearning/learning-full-stack-javascript-development-mongodb-node-and-react-2424660/issues"
+	},
+	"homepage": "https://github.com/LinkedInLearning/learning-full-stack-javascript-development-mongodb-node-and-react-2424660#readme",
+	"dependencies": {
+		"axios": "^1.7.7",
+		"cors": "^2.8.5",
+		"ejs": "^3.1.10",
+		"express": "^4.21.1",
+		"mongodb": "^6.10.0",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"ts-loader": "^9.5.1",
+		"typescript": "^5.6.3",
+		"webpack": "^5.96.1",
+		"webpack-cli": "^5.1.4"
+	},
+	"devDependencies": {
+		"@eslint/compat": "^1.2.2",
+		"@eslint/eslintrc": "^3.1.0",
+		"@eslint/js": "^9.14.0",
+		"@types/cors": "^2.8.17",
+		"@types/express": "^5.0.0",
+		"@types/react-dom": "^18.3.1",
+		"@typescript-eslint/parser": "^8.13.0",
+		"eslint": "^9.14.0",
+		"eslint-plugin-react": "^7.37.2",
+		"eslint-plugin-react-hooks": "^5.0.0",
+		"globals": "^15.12.0",
+		"prettier": "^3.3.3",
+		"ts-node-dev": "^2.0.0"
+	}
 }
