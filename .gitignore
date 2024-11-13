@@ -1,4 +1,27 @@
-node_modules
-.vscode
-/dist/main.js
+# logs
+logs
+*.log
+npm-debug.log*
 
+# os files
+.DS_Store
+
+# dependency directories
+# build and set-up files
+node_modules
+dist
+
+
+# Editor directories and files
+.vscode/*
+
+# optional npm cache directory
+.npm
+
+# optional eslint cache
+.eslintcache
+
+# dotenv environment variable files
+.env
+.env.test
+*.local

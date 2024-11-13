@@ -3,6 +3,7 @@ import {
 	fixupPluginRules,
 	includeIgnoreFile,
 } from '@eslint/compat'
+import eslintConfigPrettier from 'eslint-config-prettier'
 import react from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
 import globals from 'globals'
@@ -22,12 +23,13 @@ const compat = new FlatCompat({
 const gitignorePath = path.resolve(__dirname, '.gitignore')
 
 export default [
+	eslintConfigPrettier,
 	includeIgnoreFile(gitignorePath),
 	...fixupConfigRules(
 		compat.extends(
-			'eslint:recommended',
 			'plugin:react/recommended',
 			'plugin:react-hooks/recommended',
+			'eslint:recommended',
 		),
 		...compat.env({
 			es2022: true,
@@ -35,11 +37,7 @@ export default [
 		}),
 	),
 	{
-		ignores: [
-			'**/.eslintrc.js',
-			'**/webpack.config.js',
-			'**/prettier.config.js',
-		],
+		ignores: ['*.config.js'],
 	},
 	// general rules
 	{
@@ -48,7 +46,7 @@ export default [
 			'react-hooks': fixupPluginRules(reactHooks),
 		},
 
-		files: ['**/*.{js,ts,jsx,tsx,vue}'],
+		files: ['**/*.{js,ts,jsx,tsx}'],
 		languageOptions: {
 			ecmaVersion: 2022,
 			sourceType: 'module',
@@ -71,6 +69,7 @@ export default [
 		rules: {
 			'react/prop-types': 'off',
 			'react/react-in-jsx-scope': 'off',
+			'indent': ['error', 'tab'],
 		},
 	},
 ]
